@@ -49,7 +49,7 @@ export default function Home() {
             <div className="home-container">
                 <div className="home-image">
                     <img
-                        src="https://via.placeholder.com/300x300.png?text=Your+Photo"
+                        src="src/assets/my_image_2.png"
                         alt="Profile"
                     />
                 </div>

@@ -81,6 +81,50 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
+                <div className="project-card">
+                    {/*<img src={project3} alt="AI Chatbot using Gemini API" />*/}
+                    <div className="project-content">
+                        <h3>Tumor Prediction ML Model</h3>
+                        <p>
+                            Tumor prediction AI/ML model developed by using python with scikit learn.
+                            through this system we can upload scan images of brain and predict the tumor type.
+                        </p>
+                        <div className="project-buttons">
+                            <a
+                                href="https://github.com/yourusername/RoleBasedChatbot"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Source Code
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="project-card">
+                    {/*<img src={project3} alt="AI Chatbot using Gemini API" />*/}
+                    <div className="project-content">
+                        <h3>EduNexis University Management System</h3>
+                        <p>
+                            EduNexis is a UMS developed by using React,TypeScript and Firebase.
+                            It has features like student management, course management, fee management,Intake management etc.
+                        </p>
+                        <div className="project-buttons">
+                            <a
+                                href="https://github.com/yourusername/RoleBasedChatbot"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Source Code
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

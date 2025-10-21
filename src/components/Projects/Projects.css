@@ -1,20 +1,56 @@
 .projects-section {
-    background-color: #fff;
-    padding: 6rem 2rem;
+    position: relative;
+    padding: 8rem 2rem;
+    background: linear-gradient(135deg, #0d0d1a, #1a1a40);
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Subtle animated background stripe */
+.projects-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: repeating-linear-gradient(
+            90deg,
+            rgba(108, 99, 255, 0.05) 0,
+            rgba(108, 99, 255, 0.1) 2px,
+            transparent 4px
+    );
+    animation: moveStripe 18s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes moveStripe {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .projects-section h2 {
-    font-size: 2.5rem;
-    color: #1f2937;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    color: #6c63ff;
     text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
 }
 
 .projects-intro {
     text-align: center;
-    font-size: 1.1rem;
-    color: #4b5563;
-    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    color: #d1d5db;
+    margin-bottom: 3.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
 }
 
 .projects-grid {
@@ -23,53 +59,72 @@
     gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .project-card {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f9fafb;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 40px rgba(108, 99, 255, 0.4);
 }
 
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    transition: transform 0.4s ease;
+/* Add light glow effect on hover */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+            circle at 30% 30%,
+            rgba(108, 99, 255, 0.2),
+            transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
 }
 
-.project-card:hover img {
-    transform: scale(1.05);
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-content {
-    padding: 1.5rem;
+    position: relative;
+    z-index: 2;
     text-align: left;
 }
 
 .project-content h3 {
-    font-size: 1.4rem;
-    color: #1f2937;
-    margin-bottom: 0.6rem;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
 }
 
 .project-content p {
-    color: #4b5563;
+    color: #d1d5db;
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
 }
 
+/* Project Buttons */
 .project-buttons {
     display: flex;
     gap: 1rem;
@@ -78,21 +133,44 @@
 
 .project-buttons a {
     text-decoration: none;
-    background-color: #6c63ff;
+    background: linear-gradient(90deg, #6c63ff, #4f46e5);
     color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
+    padding: 0.7rem 1.3rem;
+    border-radius: 8px;
     font-size: 0.95rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
 }
 
 .project-buttons a:hover {
-    background-color: #5850ec;
+    background: linear-gradient(90deg, #4f46e5, #6c63ff);
+    box-shadow: 0 0 25px rgba(108, 99, 255, 0.5);
+    transform: translateY(-2px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Optional Project Image (if re-added) */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .projects-intro {
+        font-size: 1rem;
+    }
+
     .project-content {
         text-align: center;
     }

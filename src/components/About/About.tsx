@@ -1,12 +1,12 @@
 import "./About.css";
-// import profilePic from "../../assets/profile.jpg"; // replace with your image
+import profilePic from "../../assets/my_image_2.png"; // replace with your image
 
 export default function About() {
     return (
         <section id="about" className="section about-section">
             <div className="about-container">
                 <div className="about-image">
-                    {/*<img src={profilePic} alt="Sampath Chulaka" />*/}
+                    <img src={profilePic} alt="Sampath Chulaka" />
                 </div>
 
                 <div className="about-content">
