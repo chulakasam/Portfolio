@@ -32,6 +32,14 @@ export default function Experience() {
                                 <span className="timeline-date">2020</span>
                             </div>
                         </div>
+
+                        <div className="timeline-item">
+                            <div className="timeline-content">
+                                <h4>G.C.E Ordinary Level</h4>
+                                <p>National Examination, Sri Lanka</p>
+                                <span className="timeline-date">2016</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -47,6 +55,7 @@ export default function Experience() {
                                     <li>Developed backend APIs using Spring Boot for SmartTags and Voteme projects.</li>
                                     <li>Collaborated with frontend teams to integrate RESTful services.</li>
                                     <li>Worked with MySQL databases and implemented efficient data queries.</li>
+                                    <li>Designed WordPress WebSite for Acespect Australia Building Inspection.</li>
                                 </ul>
                                 <span className="timeline-date">2024 (6 Months)</span>
                             </div>
