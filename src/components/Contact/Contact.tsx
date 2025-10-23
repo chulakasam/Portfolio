@@ -51,8 +51,8 @@ export default function Contact() {
                     </p>
 
                     <div className="contact-details">
-                        <p><FaEnvelope /> sampathchulaka@gmail.com</p>
-                        <p><FaPhoneAlt /> +94 71 234 5678</p>
+                        <p><FaEnvelope /> sampathchulaka33872@gmail.com</p>
+                        <p><FaPhoneAlt /> +94 71 681 1003</p>
                     </div>
 
                     <div className="social-links">
@@ -62,7 +62,7 @@ export default function Contact() {
                         <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                             <FaGithub />
                         </a>
-                        <a href="mailto:sampathchulaka@gmail.com">
+                        <a href="mailto:sampathchulaka33872@gmail.com">
                             <FaEnvelope />
                         </a>
                     </div>
