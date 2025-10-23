@@ -39,6 +39,7 @@
 
 import "./Home.css";
 import ThreeBackground from "./ThreeBackground.tsx";
+import profilePic from "../../assets/my_image_2.png";
 
 export default function Home() {
     return (
@@ -49,7 +50,7 @@ export default function Home() {
             <div className="home-container">
                 <div className="home-image">
                     <img
-                        src="src/assets/my_image_2.png"
+                        src={profilePic}
                         alt="Profile"
                     />
                 </div>
