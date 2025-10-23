@@ -56,10 +56,10 @@ export default function Contact() {
                     </div>
 
                     <div className="social-links">
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/chulaka-sampath-85768b2ab/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin />
                         </a>
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/chulakasam" target="_blank" rel="noopener noreferrer">
                             <FaGithub />
                         </a>
                         <a href="mailto:sampathchulaka33872@gmail.com">
