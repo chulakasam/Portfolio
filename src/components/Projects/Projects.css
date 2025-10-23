@@ -12,6 +12,7 @@
   --container-padding: 1rem;
 }
 
+/* Section Base */
 .projects-section {
   position: relative;
   padding: clamp(3rem, 8vw, 6rem) var(--container-padding);
@@ -24,6 +25,7 @@
   justify-content: center;
 }
 
+/* Heading */
 .projects-section h2 {
   font-size: clamp(2rem, 6vw, 3.5rem);
   color: var(--primary);
@@ -31,7 +33,6 @@
   margin: 0 auto 1.5rem;
   text-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
   position: relative;
-  display: block;
   width: fit-content;
   padding: 0 1rem;
   opacity: 0;
@@ -57,6 +58,7 @@
   transform-origin: left;
 }
 
+/* Intro Text */
 .projects-intro {
   text-align: center;
   font-size: clamp(1rem, 1.2vw, 1.2rem);
@@ -70,42 +72,36 @@
   animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
+/* Grid Layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 2;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease 0.4s forwards;
 }
 
+/* Project Card */
 .project-card {
   position: relative;
   overflow: hidden;
   border-radius: var(--border-radius);
   background: var(--card-bg);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
   transition: var(--transition);
-  padding: 1.2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  transform: translateY(20px);
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
   will-change: transform, box-shadow;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
@@ -113,18 +109,6 @@
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; }
 .project-card:nth-child(5) { animation-delay: 0.5s; }
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
 
 .project-card:hover {
   transform: translateY(-8px) scale(1.02);
@@ -140,9 +124,9 @@
   width: 200%;
   height: 200%;
   background: radial-gradient(
-    circle at 30% 30%,
-    rgba(108, 99, 255, 0.1),
-    transparent 60%
+          circle at 30% 30%,
+          rgba(108, 99, 255, 0.1),
+          transparent 60%
   );
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -154,14 +138,7 @@
   opacity: 1;
 }
 
-.project-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
+/* Image */
 .project-card img {
   width: 100%;
   height: 200px;
@@ -171,7 +148,6 @@
   transition: var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.1);
   aspect-ratio: 16/9;
-  object-position: top;
   background: linear-gradient(90deg, #1a1a40 0%, #2d2b6e 50%, #1a1a40 100%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite linear;
@@ -182,11 +158,19 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Content */
+.project-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .project-content h3 {
   font-size: clamp(1.3rem, 1.5vw, 1.6rem);
   color: var(--text-primary);
   margin: 0.5rem 0 1rem;
-  line-height: 1.3;
   font-weight: 600;
 }
 
@@ -198,12 +182,12 @@
   flex-grow: 1;
 }
 
+/* Buttons */
 .project-buttons {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
   margin-top: auto;
-  width: 100%;
 }
 
 .project-buttons a {
@@ -215,15 +199,9 @@
   font-size: clamp(0.9rem, 1.1vw, 1rem);
   font-weight: 600;
   transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   flex: 1 1 140px;
   text-align: center;
-  min-width: 0;
-  white-space: nowrap;
   border: 1px solid transparent;
-  will-change: transform, box-shadow;
 }
 
 .project-buttons a:last-child {
@@ -241,159 +219,104 @@
   background: rgba(108, 99, 255, 0.1);
 }
 
-/* Responsive Design */
-@media (min-width: 576px) {
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1.5rem;
-  }
-  
-  .project-card {
-    padding: 1.5rem;
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (min-width: 768px) {
-  .projects-section {
-    --container-padding: 2rem;
-  }
-  
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
-  }
-  
-  .project-card {
-    padding: 1.75rem;
-  }
-  
-  .project-content h3 {
-    font-size: 1.4rem;
-  }
-  
-  .project-content p {
-    font-size: 1rem;
-  }
-  
-  .project-buttons a {
-    padding: 0.8rem 1.5rem;
-  }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-@media (min-width: 1024px) {
-  .projects-section {
-    --container-padding: 3rem;
-  }
-  
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 2rem;
-    max-width: 1400px;
-  }
-  
-  .project-card {
-    padding: 2rem;
-  }
-  
-  .project-content h3 {
-    font-size: 1.5rem;
-  }
-}
+/* Responsive Breakpoints */
 
-@media (max-width: 767px) {
+/* Tablets */
+@media (max-width: 992px) {
   .projects-section {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
   }
-
   .projects-intro {
-    font-size: 1rem;
-    line-height: 1.7;
     margin-bottom: 2.5rem;
   }
+  .project-card img {
+    height: 180px;
+  }
+}
 
+/* Mobile Large */
+@media (max-width: 767px) {
+  .projects-section {
+    padding: 2.5rem 1rem;
+  }
+  .projects-section h2 {
+    font-size: 2rem;
+  }
   .project-card {
     padding: 1.25rem;
   }
-
   .project-content h3 {
+    font-size: 1.25rem;
   }
-
-  @media (max-width: 480px) {
-    .projects-section {
-      padding: 2.5rem 0.75rem;
-    }
-
-    .projects-section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .projects-intro {
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
-
-    .projects-grid {
-      padding: 0 0.5rem;
-    }
-
-    .project-card {
-      padding: 1.1rem;
-      border-radius: 12px;
-    }
-
-    .project-content h3 {
-      font-size: 1.25rem;
-      margin: 0.2rem 0 0.6rem;
-    }
-
-    .project-content p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1.1rem;
-    }
-
-    .project-buttons {
-      gap: 0.6rem;
-    }
-
-    .project-buttons a {
-      padding: 0.6rem 0.8rem;
-      font-size: 0.9rem;
-      border-radius: 6px;
-    }
-
-    .project-card img {
-      height: 160px;
-      margin-bottom: 0.9rem;
-      border-radius: 10px;
-    }
+  .project-content p {
+    font-size: 0.95rem;
   }
+  .project-buttons a {
+    padding: 0.6rem 0.9rem;
+  }
+  .project-card img {
+    height: 160px;
+  }
+}
 
-  /* Reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    .project-card,
-    .project-card:hover,
-    .project-buttons a,
-    .project-card img,
-    .projects-section h2,
-    .projects-intro,
-    .projects-grid {
-      animation: none !important;
-      transition: none !important;
-    }
+/* Mobile Small */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 2rem 0.75rem;
+  }
+  .projects-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .projects-intro {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .project-card {
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .project-buttons {
+    gap: 0.6rem;
+  }
+  .project-buttons a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
 
-    .project-card,
-    .projects-section h2,
-    .projects-intro,
-    .projects-grid {
-      transform: none !important;
-      opacity: 1 !important;
-    }
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+  .projects-grid {
+    max-width: 1600px;
+    gap: 2.5rem;
+  }
+  .project-card {
+    padding: 2rem;
+  }
+}
 
-    .project-card img {
-      animation: none !important;
-    }
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .project-card, .projects-section h2, .projects-intro, .projects-grid {
+    transform: none !important;
+    opacity: 1 !important;
   }
 }
