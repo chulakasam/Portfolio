@@ -22,11 +22,15 @@ export default function About() {
                         <h3>Skills</h3>
                         <ul>
                             <li>React / React Native</li>
+                            <li>WordPress</li>
                             <li>Node.js / Express</li>
                             <li>Java / Spring Boot</li>
                             <li>HTML, CSS, JavaScript, TypeScript</li>
                             <li>MySQL / MongoDB</li>
                             <li>Git / GitHub</li>
+                            <li>Docker</li>
+                            <li>GCP / AWS</li>
+                            <li>Python</li>
                         </ul>
                     </div>
                 </div>
