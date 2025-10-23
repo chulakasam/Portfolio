@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                     <a href="https://github.com/chulakasam" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                     </a>
-                    <a href="https://linkedin.com/in/chulaka sampath" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/chulaka-sampath-85768b2ab/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin />
                     </a>
                     <a href="mailto:sampathchulaka33872@gmail.com">
