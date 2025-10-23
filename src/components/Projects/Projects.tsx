@@ -1,7 +1,7 @@
 import "./Projects.css";
-// import project1 from "../../assets/greenshadow.jpg";
-// import project2 from "../../assets/lastore.jpg";
-// import project3 from "../../assets/chatbot.jpg";
+import project1 from "../../assets/green shadow.png";
+import project2 from "../../assets/1st sem final.png";
+import project3 from "../../assets/img.png";
 
 export default function Projects() {
     return (
@@ -14,7 +14,7 @@ export default function Projects() {
 
             <div className="projects-grid">
                 <div className="project-card">
-                    {/*<img src={project1} alt="Green Shadow - Crop Management System" />*/}
+                    <img src={project1} alt="Green Shadow - Crop Management System" />
                     <div className="project-content">
                         <h3>Green Shadow</h3>
                         <p>
@@ -37,7 +37,7 @@ export default function Projects() {
                 </div>
 
                 <div className="project-card">
-                    {/*<img src={project2} alt="LAStore - Fitness E-commerce App" />*/}
+                    <img src={project2} alt="LAStore - Fitness E-commerce App" />
                     <div className="project-content">
                         <h3>LAStore</h3>
                         <p>
@@ -104,7 +104,7 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="project-card">
-                    {/*<img src={project3} alt="AI Chatbot using Gemini API" />*/}
+                    <img src={project3} alt="AI Chatbot using Gemini API" />
                     <div className="project-content">
                         <h3>EduNexis University Management System</h3>
                         <p>
