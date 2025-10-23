@@ -74,9 +74,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
   position: relative;
   z-index: 2;
   opacity: 0;
@@ -94,7 +96,7 @@
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
   transition: var(--transition);
-  padding: 1.5rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -102,6 +104,8 @@
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
   will-change: transform, box-shadow;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
@@ -313,29 +317,6 @@
   }
   
   .project-content h3 {
-    font-size: 1.3rem;
-    margin: 0.25rem 0 0.75rem;
-  }
-  
-  .project-content p {
-    font-size: 0.95rem;
-    margin-bottom: 1.25rem;
-  }
-  
-  .project-buttons {
-    gap: 0.75rem;
-  }
-  
-  .project-buttons a {
-    padding: 0.65rem 1rem;
-    font-size: 0.95rem;
-    flex: 1 1 100%;
-  }
-  
-  .project-card img {
-    height: 180px;
-    margin-bottom: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
