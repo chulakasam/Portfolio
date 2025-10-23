@@ -148,9 +148,7 @@
   transition: var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.1);
   aspect-ratio: 16/9;
-  background: linear-gradient(90deg, #1a1a40 0%, #2d2b6e 50%, #1a1a40 100%);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite linear;
+  background: #1a1a40;
 }
 
 .project-card:hover img {
@@ -227,10 +225,7 @@
   }
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
+/* Shimmer animation removed */
 
 /* Responsive Breakpoints */
 
